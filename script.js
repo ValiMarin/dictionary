@@ -10,13 +10,15 @@ function timeOutMessage(time) {
     resultSearch.textContent = "";
     searchBtn.disabled = false;
     searchWord.value = "";
+    newWord.value = "";
   }, time);
 }
 
 function save() {
   if (newWord.value !== "") {
+    timeOutMessage(1000);
     dictionary.push(newWord.value);
-    newWord.value = "";
+    resultSearch.textContent = "Word saved!";
   }
 }
 
